@@ -175,3 +175,5 @@ Live evaluation requires valid API credentials, appropriate model access, and av
 ## Purpose
 
 This project is part of a practical learning journey toward AI Quality Engineering. It demonstrates the development of reusable automation, structured LLM evaluation, quality metrics, test reporting, and regression safeguards using Python and pytest.
+
+[![AI-QE Tests](https://github.com/rohithmaxn/AI-QE-Journey/actions/workflows/ci.yml/badge.svg)](https://github.com/rohithmaxn/AI-QE-Journey/actions/workflows/ci.yml)
