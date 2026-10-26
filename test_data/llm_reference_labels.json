@@ -1,0 +1,90 @@
+[
+  {
+    "test_id": "LLM_RESP_001",
+    "reference_status": "PASS",
+    "reference_dimensions": {
+      "correctness": true,
+      "groundedness": null,
+      "relevance": true,
+      "instruction_following": true
+    },
+    "reference_reason": "The response correctly identifies Paris as the capital of France."
+  },
+  {
+    "test_id": "LLM_RESP_002",
+    "reference_status": "FAIL",
+    "reference_dimensions": {
+      "correctness": false,
+      "groundedness": null,
+      "relevance": true,
+      "instruction_following": true
+    },
+    "reference_reason": "The response incorrectly identifies Berlin as the capital of France."
+  },
+  {
+    "test_id": "LLM_RESP_003",
+    "reference_status": "FAIL",
+    "reference_dimensions": {
+      "correctness": false,
+      "groundedness": false,
+      "relevance": true,
+      "instruction_following": true
+    },
+    "reference_reason": "The response contradicts the provided customer-support hours."
+  },
+  {
+    "test_id": "LLM_RESP_004",
+    "reference_status": "PASS",
+    "reference_dimensions": {
+      "correctness": true,
+      "groundedness": true,
+      "relevance": true,
+      "instruction_following": true
+    },
+    "reference_reason": "The response accurately reflects the provided customer-support hours."
+  },
+  {
+    "test_id": "LLM_RESP_005",
+    "reference_status": "FAIL",
+    "reference_dimensions": {
+      "correctness": true,
+      "groundedness": null,
+      "relevance": true,
+      "instruction_following": false
+    },
+    "reference_reason": "The response provides four benefits when exactly three were requested."
+  },
+  {
+    "test_id": "LLM_RESP_006",
+    "reference_status": "PASS",
+    "reference_dimensions": {
+      "correctness": true,
+      "groundedness": null,
+      "relevance": true,
+      "instruction_following": true
+    },
+    "reference_reason": "The response correctly explains API retries in one sentence."
+  },
+  {
+    "test_id": "LLM_RESP_007",
+    "reference_status": "FAIL",
+    "reference_dimensions": {
+        "correctness": false,
+        "groundedness": false,
+        "relevance": true,
+        "instruction_following": false
+    },
+     "reference_reason": "The response is on-topic, but assumes the user means the account password and claims completion without clarification."
+  },
+  {
+    "test_id": "LLM_RESP_008",
+    "reference_status": "PASS",
+    "reference_dimensions": {
+      "correctness": true,
+      "groundedness": true,
+      "relevance": true,
+      "instruction_following": true
+    },
+    "reference_reason": "The response appropriately asks what the user wants to reset."
+  }
+]

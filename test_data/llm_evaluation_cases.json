@@ -1,0 +1,130 @@
+[
+  {
+    "test_id": "LLM_RESP_001",
+    "category": "factual_correctness",
+    "question": "What is the capital of France?",
+    "context": "",
+    "expected_answer": "Paris",
+    "actual_response": "The capital of France is Paris.",
+    "evaluation_criteria": {
+      "correctness": true,
+      "groundedness": null,
+      "relevance": true,
+      "instruction_following": true
+    },
+    "expected_status": "PASS",
+    "expected_reason": "Response is correct, relevant, and directly answers the question."
+  },
+  {
+    "test_id": "LLM_RESP_002",
+    "category": "factual_correctness",
+    "question": "What is the capital of France?",
+    "context": "",
+    "expected_answer": "Paris",
+    "actual_response": "The capital of France is Berlin.",
+    "evaluation_criteria": {
+      "correctness": false,
+      "groundedness": null,
+      "relevance": true,
+      "instruction_following": true
+    },
+    "expected_status": "FAIL",
+    "expected_reason": "Response contains an incorrect factual answer."
+  },
+  {
+    "test_id": "LLM_RESP_003",
+    "category": "groundedness",
+    "question": "What are the support hours?",
+    "context": "Customer support is available Monday to Friday, from 9:00 AM to 5:00 PM IST.",
+    "expected_answer": "Monday to Friday, from 9:00 AM to 5:00 PM IST.",
+    "actual_response": "Customer support is available 24 hours a day, 7 days a week.",
+    "evaluation_criteria": {
+      "correctness": false,
+      "groundedness": false,
+      "relevance": true,
+      "instruction_following": true
+    },
+    "expected_status": "FAIL",
+    "expected_reason": "Response contradicts the supplied context."
+  },
+  {
+    "test_id": "LLM_RESP_004",
+    "category": "groundedness",
+    "question": "What are the support hours?",
+    "context": "Customer support is available Monday to Friday, from 9:00 AM to 5:00 PM IST.",
+    "expected_answer": "Monday to Friday, from 9:00 AM to 5:00 PM IST.",
+    "actual_response": "Support is available Monday to Friday, 9:00 AM to 5:00 PM IST.",
+    "evaluation_criteria": {
+      "correctness": true,
+      "groundedness": true,
+      "relevance": true,
+      "instruction_following": true
+    },
+    "expected_status": "PASS",
+    "expected_reason": "Response faithfully reflects the supplied context."
+  },
+  {
+    "test_id": "LLM_RESP_005",
+    "category": "instruction_following",
+    "question": "List exactly three benefits of automated testing.",
+    "context": "",
+    "expected_answer": "Faster feedback, repeatability, and reduced manual effort.",
+    "actual_response": "1. Faster feedback\n2. Repeatability\n3. Reduced manual effort\n4. Better reporting",
+    "evaluation_criteria": {
+      "correctness": true,
+      "groundedness": null,
+      "relevance": true,
+      "instruction_following": false
+    },
+    "expected_status": "FAIL",
+    "expected_reason": "Response gives four benefits when exactly three were requested."
+  },
+  {
+    "test_id": "LLM_RESP_006",
+    "category": "instruction_following",
+    "question": "Answer in one sentence: Why are retries useful in API testing?",
+    "context": "",
+    "expected_answer": "Retries can help recover from temporary failures such as timeouts or transient server errors.",
+    "actual_response": "Retries are useful because they can recover from temporary failures such as timeouts or transient server errors.",
+    "evaluation_criteria": {
+      "correctness": true,
+      "groundedness": null,
+      "relevance": true,
+      "instruction_following": true
+    },
+    "expected_status": "PASS",
+    "expected_reason": "Response is correct and follows the one-sentence instruction."
+  },
+  {
+    "test_id": "LLM_RESP_007",
+    "category": "ambiguity_handling",
+    "question": "Can you reset it?",
+    "context": "The user has not specified what object, account, or setting they want to reset.",
+    "expected_answer": "Ask the user what they want to reset.",
+    "actual_response": "Sure. I have reset your account password.",
+    "evaluation_criteria": {
+      "correctness": false,
+      "groundedness": false,
+      "relevance": true,
+      "instruction_following": false
+    },
+    "expected_status": "FAIL",
+    "expected_reason": "Response assumes missing information and claims an action without sufficient context."
+  },
+  {
+    "test_id": "LLM_RESP_008",
+    "category": "ambiguity_handling",
+    "question": "Can you reset it?",
+    "context": "The user has not specified what object, account, or setting they want to reset.",
+    "expected_answer": "Ask the user what they want to reset.",
+    "actual_response": "Sure — what would you like me to reset?",
+    "evaluation_criteria": {
+      "correctness": true,
+      "groundedness": true,
+      "relevance": true,
+      "instruction_following": true
+    },
+    "expected_status": "PASS",
+    "expected_reason": "Response appropriately asks for the missing information instead of making an assumption."
+  }
+]

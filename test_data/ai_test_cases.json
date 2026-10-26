@@ -1,0 +1,58 @@
+[
+    {
+        "test_id": "LLM001",
+        "score": 0.92,
+        "hallucination": false,
+        "expected_status": "PASS",
+        "expected_reason": "Quality threshold met"
+    },
+    {
+        "test_id": "LLM002",
+        "score": 0.72,
+        "hallucination": false,
+        "expected_status": "FAIL",
+        "expected_reason": "Score below threshold"
+    },
+    {
+        "test_id": "LLM003",
+        "score": 0.88,
+        "hallucination": true,
+        "expected_status": "FAIL",
+        "expected_reason": "Hallucination detected"
+    },
+    {
+        "test_id": "LLM004",
+        "score": 0.96,
+        "hallucination": false,
+        "expected_status": "PASS",
+        "expected_reason": "Quality threshold met"
+    },
+    {
+        "test_id": "LLM005",
+        "score": 0.61,
+        "hallucination": false,
+        "expected_status": "FAIL",
+        "expected_reason": "Score below threshold"
+    },
+    {
+        "test_id": "LLM006",
+        "score": 0.80,
+        "hallucination": false,
+        "expected_status": "PASS",
+        "expected_reason": "Quality threshold met"
+    },
+    {
+        "test_id": "LLM007",
+        "score": 0.80,
+        "hallucination": true,
+        "expected_status": "FAIL",
+        "expected_reason": "Hallucination detected"
+    },
+    {
+        "test_id": "LLM008",
+        "score": 0.95,
+        "hallucination": true,
+        "expected_status": "FAIL",
+        "expected_reason": "Hallucination detected"
+    }
+]

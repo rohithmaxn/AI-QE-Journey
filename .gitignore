@@ -1,0 +1,35 @@
+
+# Python cache files
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Pytest cache
+.pytest_cache/
+
+# API keys and local secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Generated reports
+ai_qe_results.txt
+llm_judge_report.json
+llm_judge_report.txt
+
+# Test coverage output
+.coverage
+htmlcov/
+
+# Editor and operating-system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
