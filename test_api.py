@@ -10,6 +10,9 @@ from config import AI_SCORE_THRESHOLD
 
 # Load AI evaluation data through the centralized loader
 test_cases = load_test_cases()
+import logging
+
+logger = logging.getLogger(__name__)
 
 
 # ---------------------------------------------------------
@@ -55,11 +58,12 @@ def test_api_response_values(api_response):
 
 def test_ai_evaluation(test_case):
     """Test to evaluate AI-generated responses against expected outcomes."""
+    logger.info("Starting AI evaluation test")
     status, reason = evaluate_test(test_case)
 
     assert status == test_case["expected_status"]
     assert reason == test_case["expected_reason"]
-
+    logger.info("AI evaluation test completed successfully")
 
 # ---------------------------------------------------------
 # METRICS
